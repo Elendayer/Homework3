@@ -13,6 +13,9 @@ namespace levelGenerator
         [SerializeField] private int _width;
         [SerializeField] private int _height;
 
+        [SerializeField] private GameObject _drunkardLayer;
+        [SerializeField] private GameObject _drunkard;
+        
         public GameObject FloorLayer
         {
             get => _floorLayer;
@@ -46,7 +49,7 @@ namespace levelGenerator
                     tile.transform.position = new Vector2(posX, posY);
                 }
             }
-            this.gameObject.GetComponent<DrunkardSpawner>().StartDrunkard();
+            Instantiate(_drunkard, _drunkardLayer.transform);        
         }
     }
 }

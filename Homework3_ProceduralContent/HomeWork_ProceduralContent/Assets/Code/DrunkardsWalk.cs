@@ -12,7 +12,7 @@ namespace levelGenerator
         [SerializeField] private float _interval;
         [SerializeField] private GameObject _floorTile;
 
-        public int _direction;
+        private int _direction;
         
         [SerializeField]private int _randomSeed;
         [SerializeField]private bool isSeedRandom;
@@ -21,7 +21,7 @@ namespace levelGenerator
         private WorldGrid _worldGridScript;
 
         private float _floorPercent;
-        [SerializeField] private float _AimedFloorpercent;
+        [SerializeField] private float _aimedFloorpercent;
 
         private int _tileCount;
         private int currentFloorCount;
@@ -48,7 +48,7 @@ namespace levelGenerator
 
         private IEnumerator DrunkardsWalkStep()
         {
-            while (_AimedFloorpercent >= _floorPercent)
+            while (_aimedFloorpercent >= _floorPercent)
             {
                 yield return new WaitForSeconds(_interval);
 

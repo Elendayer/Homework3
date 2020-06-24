@@ -11,7 +11,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Code/DrunkardSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/DrunkardsWalk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/WorldGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F01FE9CC-0727-4016-B511-AAF01D219EA0/81/6a145047/Collider.cs" root0="SKIP_HIGHLIGHTING" />
@@ -19,8 +18,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/WorldGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/DrunkardSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/WorldGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/DrunkardsWalk.cs" />
       </list>
     </option>
@@ -64,6 +63,7 @@
       <updated>1592922025223</updated>
       <workItem from="1592922033244" duration="12017000" />
       <workItem from="1593016090104" duration="4932000" />
+      <workItem from="1593029263532" duration="2183000" />
     </task>
     <servers />
   </component>

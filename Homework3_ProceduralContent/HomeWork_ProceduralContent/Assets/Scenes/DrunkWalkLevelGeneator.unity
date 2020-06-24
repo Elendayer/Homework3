@@ -333,7 +333,6 @@ GameObject:
   m_Component:
   - component: {fileID: 712543150}
   - component: {fileID: 712543149}
-  - component: {fileID: 712543151}
   m_Layer: 0
   m_Name: WorldGrid
   m_TagString: Untagged
@@ -357,6 +356,9 @@ MonoBehaviour:
   _wallLayer: {fileID: 404364650}
   _width: 20
   _height: 20
+  _drunkardLayer: {fileID: 646602953}
+  _drunkard: {fileID: 9155490956385844511, guid: 79154f53f24dd0549ae66cc93c826ec4,
+    type: 3}
   referenceTile: {fileID: 8721982152546493193, guid: b6d14e973f041754bb636608bd4b7ea0,
     type: 3}
 --- !u!4 &712543150
@@ -375,22 +377,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &712543151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712543148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cfe10ba39db34a499dff4572bebf012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _worldGrid: {fileID: 712543148}
-  _drunkardManager: {fileID: 646602953}
-  _drunkard: {fileID: 9155490956385844511, guid: 79154f53f24dd0549ae66cc93c826ec4,
-    type: 3}
 --- !u!1 &2043182077
 GameObject:
   m_ObjectHideFlags: 0
