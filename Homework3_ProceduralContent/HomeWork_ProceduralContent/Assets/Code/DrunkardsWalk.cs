@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace levelGenerator
@@ -12,23 +13,37 @@ namespace levelGenerator
         [SerializeField] private GameObject _floorTile;
 
         public int _direction;
-
+        
+        [SerializeField]private int _randomSeed;
+        [SerializeField]private bool isSeedRandom;
+        
         private GameObject _worldGrid;
         private WorldGrid _worldGridScript;
-        
+
         private float _floorPercent;
         [SerializeField] private float _AimedFloorpercent;
-        
+
         private int _tileCount;
         private int currentFloorCount;
 
+        private GameObject WallLayer;
+        private GameObject FloorLayer;
+        
         private void Start()
         {
             _worldGrid = GameObject.Find("WorldGrid");
             _worldGridScript = _worldGrid.GetComponent<WorldGrid>();
             _tileCount = _worldGridScript.Height * _worldGridScript.Width;
+
+            WallLayer = _worldGrid.GetComponent<WorldGrid>().WallLayer;
+            FloorLayer = _worldGrid.GetComponent<WorldGrid>().FloorLayer;
             
             StartCoroutine("DrunkardsWalkStep");
+
+            if (isSeedRandom == false)
+            {
+                Random.InitState(_randomSeed);
+            }
         }
 
         private IEnumerator DrunkardsWalkStep()
@@ -41,6 +56,7 @@ namespace levelGenerator
 
                 Vector2 currentPosition;
                 currentPosition = this.transform.position;
+
 
                 if (_direction == 1)
                 {
@@ -63,21 +79,22 @@ namespace levelGenerator
                 }
             }
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.transform.parent == WallLayer.transform)
+            {
+                Instantiate(_floorTile, FloorLayer.transform);
+                _floorTile.transform.position = other.transform.position;
+
+                Destroy(other.gameObject);
+            }
+        }
         private void Update()
         {
             currentFloorCount = _worldGridScript.FloorLayer.transform.childCount;
-            
-            _floorPercent = ((float) currentFloorCount/ (float) _tileCount) * 100 ;
-        }
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.transform.parent == _worldGrid.GetComponent<WorldGrid>().WallLayer.transform)
-            {
-                Instantiate(_floorTile, _worldGrid.GetComponent<WorldGrid>().FloorLayer.transform);
-                _floorTile.transform.position = other.transform.position;
-       
-                Destroy(other.gameObject);
-            }
+
+            _floorPercent = ((float) currentFloorCount / (float) _tileCount) * 100;
         }
     }
 }

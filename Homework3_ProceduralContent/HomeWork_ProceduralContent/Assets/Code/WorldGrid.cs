@@ -32,7 +32,7 @@ namespace levelGenerator
         public int Height => _height;
         public int Width => _width;
         
-        public void Start()
+        private void Start()
         {
             for (int i = 0; i < _width; i++)
             {

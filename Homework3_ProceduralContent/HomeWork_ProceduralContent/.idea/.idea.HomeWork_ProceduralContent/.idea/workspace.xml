@@ -19,8 +19,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/DrunkardSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/WorldGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/DrunkardSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/DrunkardsWalk.cs" />
       </list>
     </option>
@@ -36,6 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -61,7 +62,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592922025223</updated>
-      <workItem from="1592922033244" duration="11420000" />
+      <workItem from="1592922033244" duration="12017000" />
+      <workItem from="1593016090104" duration="4932000" />
     </task>
     <servers />
   </component>
@@ -72,5 +74,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3021" y="185" key="SettingsEditor" timestamp="1593016796307">
+      <screen x="2560" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3021" y="185" key="SettingsEditor/0.0.2048.1112/-1920.2.1920.1080/2560.0.1920.1080@2560.0.1920.1080" timestamp="1593016796307" />
   </component>
 </project>
