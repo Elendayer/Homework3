@@ -13,10 +13,10 @@ namespace levelGenerator
         [SerializeField] private GameObject _floorTile;
 
         private int _direction;
-        
-        [SerializeField]private int _randomSeed;
-        [SerializeField]private bool isSeedRandom;
-        
+
+        [SerializeField] private int _randomSeed;
+        [SerializeField] private bool isSeedRandom;
+
         private GameObject _worldGrid;
         private WorldGrid _worldGridScript;
 
@@ -28,7 +28,7 @@ namespace levelGenerator
 
         private GameObject WallLayer;
         private GameObject FloorLayer;
-        
+
         private void Start()
         {
             _worldGrid = GameObject.Find("WorldGrid");
@@ -37,7 +37,7 @@ namespace levelGenerator
 
             WallLayer = _worldGrid.GetComponent<WorldGrid>().WallLayer;
             FloorLayer = _worldGrid.GetComponent<WorldGrid>().FloorLayer;
-            
+
             StartCoroutine("DrunkardsWalkStep");
 
             if (isSeedRandom == false)
@@ -60,26 +60,35 @@ namespace levelGenerator
 
                 if (_direction == 1)
                 {
-                    this.gameObject.transform.position = new Vector2(currentPosition.x - 1, currentPosition.y);
+                    if (currentPosition.x > 0)
+                    {
+                        this.gameObject.transform.position = new Vector2(currentPosition.x - 1, currentPosition.y);
+                    }
                 }
 
                 if (_direction == 2)
                 {
-                    this.gameObject.transform.position = new Vector2(currentPosition.x + 1, currentPosition.y);
+                    if (currentPosition.x < _worldGridScript.Width -1)
+                    {
+                        this.gameObject.transform.position = new Vector2(currentPosition.x + 1, currentPosition.y);
+                    }
                 }
 
                 if (_direction == 3)
                 {
-                    this.gameObject.transform.position = new Vector2(currentPosition.x, currentPosition.y - 1);
+                    if (currentPosition.y > 0)
+                    {
+                        this.gameObject.transform.position = new Vector2(currentPosition.x, currentPosition.y - 1);
+                    }
                 }
 
                 if (_direction == 4)
                 {
-                    this.gameObject.transform.position = new Vector2(currentPosition.x, currentPosition.y + 1);
+                    if (currentPosition.y < _worldGridScript.Height -1) 
+                        this.gameObject.transform.position = new Vector2(currentPosition.x, currentPosition.y + 1);
                 }
             }
         }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.transform.parent == WallLayer.transform)

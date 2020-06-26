@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9155490956385844511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 10, z: 0.1}
+  m_LocalPosition: {x: 10, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,10 +49,9 @@ MonoBehaviour:
   _interval: 0.1
   _floorTile: {fileID: 8721982152546493193, guid: 036af7452e088714bbbdb733371ccac8,
     type: 3}
-  _direction: 0
   _randomSeed: 1
-  isSeedRandom: 0
-  _AimedFloorpercent: 10
+  isSeedRandom: 1
+  _aimedFloorpercent: 40
 --- !u!65 &4123960578804673406
 BoxCollider:
   m_ObjectHideFlags: 0
